@@ -8,12 +8,13 @@ from netmiko import NetmikoTimeoutException
 iplist = open('iplist.txt', mode='r')
 data = open('data.txt', mode='a')
 
+#this loop uses the file iplist.txt which contains the ip addresses. It then logs in and executes the show command.
 for device in iplist:
     try:
         cisco = {
             "host": device,
-            "username": "didata",
-            "password": "D@rliNGP@rk1@3$",
+            "username": "BLANK",
+            "password": "BLANK",
             "device_type": "cisco_ios",
         }
         net_connect = Netmiko(**cisco)
